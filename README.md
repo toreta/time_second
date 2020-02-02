@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/toreta/second.svg?branch=master)](https://travis-ci.com/toreta/second)
+[![Maintainability](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/maintainability)](https://codeclimate.com/github/toreta/second/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/test_coverage)](https://codeclimate.com/github/toreta/second/test_coverage)
+
 # Second
 
 Make it easy to handle integer as seconds.
