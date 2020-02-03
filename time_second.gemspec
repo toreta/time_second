@@ -1,19 +1,19 @@
-require_relative 'lib/second'
+require_relative 'lib/time_second'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'second'
-  spec.version       = ::Second::VERSION
+  spec.name          = 'time_second'
+  spec.version       = ::TimeSecond::VERSION
   spec.authors       = ['ziguzagu']
   spec.email         = ['ziguzagu@gmail.com']
 
   spec.summary       = 'Make it easy to handle integer as seconds.'
   spec.description   = 'Make it easy to handle integer as seconds.'
-  spec.homepage      = 'https://github.com/toreta/second'
+  spec.homepage      = 'https://github.com/toreta/time_second'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['changelog_uri'] = 'https://github.com/toreta/second/CHANGELOG.md'
+  spec.metadata['changelog_uri'] = 'https://github.com/toreta/time_second/CHANGELOG.md'
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

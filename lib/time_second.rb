@@ -1,12 +1,12 @@
 # Integer as a Second
-class Second
+class TimeSecond
   VERSION = '0.1.0'.freeze
 
   # Parse 'HH:MM:SS' format string and return its object
   #
   # @param [String] str 'HH:MM:SS' or 'HH:MM'
   #
-  # @return [Second]
+  # @return [TimeSecond]
   def self.parse(str)
     unless str.match(/\A\d{1,2}:\d{2}(?:\:\d{2})?\z/)
       raise ArgumentError, 'Invalid string format'
@@ -20,7 +20,7 @@ class Second
   #
   # @param [Integer] second
   #
-  # @return [Second] new object
+  # @return [TimeSecond] new object
   def initialize(sec)
     @time = sec.to_i
   end
@@ -41,7 +41,7 @@ class Second
 
   # Return second
   #
-  # @return [Integer] Second (0 ~ 59)
+  # @return [Integer] TimeSecond (0 ~ 59)
   def second
     @time % 60
   end

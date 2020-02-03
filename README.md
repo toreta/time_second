@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.com/toreta/second.svg?branch=master)](https://travis-ci.com/toreta/second)
-[![Maintainability](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/maintainability)](https://codeclimate.com/github/toreta/second/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/test_coverage)](https://codeclimate.com/github/toreta/second/test_coverage)
+[![Build Status](https://travis-ci.com/toreta/time_second.svg?branch=master)](https://travis-ci.com/toreta/time_second)
+[![Maintainability](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/maintainability)](https://codeclimate.com/github/toreta/time_second/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/test_coverage)](https://codeclimate.com/github/toreta/time_second/test_coverage)
 
-# Second
+# TimeSecond
 
 Make it easy to handle integer as seconds.
 
@@ -11,7 +11,7 @@ Make it easy to handle integer as seconds.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'second'
+gem 'time_second'
 ```
 
 And then execute:
@@ -20,14 +20,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install second
+    $ gem install time_second
 
 ## Usage
 
 
 ``` ruby
 # New from Integer
-t = Second.new(2 * 60 * 60 + 1 * 60 + 39) # 2:01:39
+t = TimeSecond.new(2 * 60 * 60 + 1 * 60 + 39) # 2:01:39
 t.hour   #=> 2
 t.minute #=> 1
 t.second #=> 39
@@ -35,12 +35,12 @@ t.hms    #=> '02:01:39'
 t.hm     #=> '02:01'
 
 # New from String
-t = Second.parse('02:01:39')
+t = TimeSecond.parse('02:01:39')
 ```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/toreta/second](https://github.com/toreta/second).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/toreta/time_second](https://github.com/toreta/time_second).
 
 ## License
 

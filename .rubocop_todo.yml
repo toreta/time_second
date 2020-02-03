@@ -11,7 +11,7 @@
 # Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
 Layout/ExtraSpacing:
   Exclude:
-    - 'second.gemspec'
+    - 'time_second.gemspec'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -19,13 +19,13 @@ Layout/ExtraSpacing:
 # SupportedStylesForExponentOperator: space, no_space
 Layout/SpaceAroundOperators:
   Exclude:
-    - 'second.gemspec'
+    - 'time_second.gemspec'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/ExpandPathArguments:
   Exclude:
-    - 'second.gemspec'
+    - 'time_second.gemspec'
 
 # Offense count: 2
 # Cop supports --auto-correct.
@@ -33,7 +33,7 @@ Style/ExpandPathArguments:
 # SupportedStyles: format, sprintf, percent
 Style/FormatString:
   Exclude:
-    - 'lib/second.rb'
+    - 'lib/time_second.rb'
 
 # Offense count: 6
 # Cop supports --auto-correct.
@@ -43,9 +43,9 @@ Style/FrozenStringLiteralComment:
   Exclude:
     - 'Gemfile'
     - 'Rakefile'
-    - 'lib/second.rb'
-    - 'second.gemspec'
-    - 'test/second_test.rb'
+    - 'lib/time_second.rb'
+    - 'time_second.gemspec'
+    - 'test/time_second_test.rb'
     - 'test/test_helper.rb'
 
 # Offense count: 1
