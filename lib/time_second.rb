@@ -1,6 +1,12 @@
+require 'forwardable'
+
 # Integer as a Second
 class TimeSecond
   VERSION = '0.1.0'.freeze
+
+  extend Forwardable
+
+  def_delegators :@time, :to_i
 
   # Parse 'HH:MM:SS' format string and return its object
   #
