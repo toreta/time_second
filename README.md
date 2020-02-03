@@ -36,6 +36,7 @@ t.hm     #=> '02:01'
 
 # New from String
 t = TimeSecond.parse('02:01:39')
+t.to_i #=> 7299
 ```
 
 ## Contributing
