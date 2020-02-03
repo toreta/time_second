@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/toreta/time_second.svg?branch=master)](https://travis-ci.com/toreta/time_second)
-[![Maintainability](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/maintainability)](https://codeclimate.com/github/toreta/time_second/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/70795f9570f5e4cc2909/test_coverage)](https://codeclimate.com/github/toreta/time_second/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/73a1cfd234b42457bc79/maintainability)](https://codeclimate.com/github/toreta/time_second/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/73a1cfd234b42457bc79/test_coverage)](https://codeclimate.com/github/toreta/time_second/test_coverage)
 
 # TimeSecond
 
