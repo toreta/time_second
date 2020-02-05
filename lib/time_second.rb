@@ -5,6 +5,7 @@ class TimeSecond
   VERSION = '0.1.0'.freeze
 
   extend Forwardable
+  include Comparable
 
   def_delegators :@time, :to_i
 
@@ -68,5 +69,10 @@ class TimeSecond
   # @return [String] 'HH:MM'
   def hm(sep = ':')
     "%02d#{sep}%02d" % [hour, minute]
+  end
+
+  # Compares one TimeSecond and another or a Integer to this TimeSecond.
+  def <=>(other)
+    @time.to_i <=> other.to_i
   end
 end

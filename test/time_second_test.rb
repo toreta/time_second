@@ -38,4 +38,9 @@ class TimeSecondTest < Minitest::Test
       TimeSecond.parse('020139')
     end
   end
+
+  def test_compares
+    second2 = TimeSecond.new(2 * 60 * 60 + 1 * 60 + 41)
+    assert @second < second2
+  end
 end
