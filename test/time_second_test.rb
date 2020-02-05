@@ -10,23 +10,23 @@ class TimeSecondTest < Minitest::Test
   end
 
   def test_hour
-    assert @second.hour, 2
+    assert_equal @second.hour, 2
   end
 
   def test_minute
-    assert @second.hour, 1
+    assert_equal @second.minute, 1
   end
 
   def test_second
-    assert @second.second, 39
+    assert_equal @second.second, 39
   end
 
   def test_hms
-    assert @second.second, '02:01:39'
+    assert_equal @second.hms, '02:01:39'
   end
 
   def test_hm
-    assert @second.second, '02:01'
+    assert_equal @second.hm, '02:01'
   end
 
   def test_parse
