@@ -81,4 +81,9 @@ class TimeSecond < Numeric
   def <=>(other)
     @time <=> other
   end
+
+  # Returns true if other is with the same time.
+  def ==(other)
+    @time.to_f == other.to_f
+  end
 end

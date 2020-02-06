@@ -54,5 +54,12 @@ class TimeSecondTest < Minitest::Test
   def test_compares
     assert @t1 < @t2
   end
-end
 
+  def test_equality
+    assert @t1 == T1
+    assert @t1 == @t1.dup
+    assert @t1 == Float(T1)
+    assert @t1 != T2
+    assert @t1 != @t2
+  end
+end
