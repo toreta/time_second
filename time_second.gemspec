@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['changelog_uri'] = 'https://github.com/toreta/time_second/CHANGELOG.md'
+  spec.metadata['changelog_uri'] = 'https://github.com/toreta/time_second/blob/master/CHANGELOG.md'
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
