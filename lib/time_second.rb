@@ -81,4 +81,39 @@ class TimeSecond < Numeric
   def <=>(other)
     @time <=> other
   end
+
+  # Returns true if other is with the same time.
+  def ==(other)
+    @time.to_f == other.to_f
+  end
+
+  # Adds another TimeSecond or Numeric to this TimeSecond.
+  def +(other)
+    r, l = @time.coerce(other)
+    self.class.new(l + r)
+  end
+
+  # Subtracts another TimeSecond or Numeric from this TimeSecond.
+  def -(other)
+    r, l = @time.coerce(other)
+    self.class.new(l - r)
+  end
+
+  # Multiple self by a Numeric and returns a new TimeSecond.
+  def *(other)
+    r, l = @time.coerce(other)
+    self.class.new(l * r)
+  end
+
+  # Divides self by a Numeric and returns a new TimeSecond.
+  def /(other)
+    r, l = @time.coerce(other)
+    self.class.new(l / r)
+  end
+
+  # Returns the modulo of this by another TimeSecond or Numeric.
+  def %(other)
+    r, l = @time.coerce(other)
+    self.class.new(l % r)
+  end
 end
