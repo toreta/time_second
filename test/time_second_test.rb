@@ -62,4 +62,31 @@ class TimeSecondTest < Minitest::Test
     assert @t1 != T2
     assert @t1 != @t2
   end
+
+  def test_add
+    assert_instance_of TimeSecond, TimeSecond.new(7) + 3
+    assert_equal TimeSecond.new(7) + TimeSecond.new(3), TimeSecond.new(10)
+    assert_equal TimeSecond.new(7.1) + 3, TimeSecond.new(10.1)
+  end
+
+  def test_subtract
+    assert_instance_of TimeSecond, TimeSecond.new(7) - 3
+    assert_equal TimeSecond.new(7) - TimeSecond.new(3), TimeSecond.new(4)
+    assert_equal TimeSecond.new(7.1) - 3, TimeSecond.new(4.1)
+  end
+
+  def test_multiple
+    assert_instance_of TimeSecond, TimeSecond.new(7) * 3
+    assert_equal TimeSecond.new(7) * 3, TimeSecond.new(21)
+  end
+
+  def test_divide
+    assert_instance_of TimeSecond, TimeSecond.new(7) / 3
+    assert_equal TimeSecond.new(7) / 3, TimeSecond.new(7 / 3)
+  end
+
+  def test_modulo
+    assert_instance_of TimeSecond, TimeSecond.new(7) % 3
+    assert_equal TimeSecond.new(7) % 3, 1
+  end
 end
