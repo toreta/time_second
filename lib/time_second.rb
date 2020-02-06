@@ -1,13 +1,8 @@
-require 'forwardable'
-
 # Integer as a Second
-class TimeSecond
+class TimeSecond < Numeric
   VERSION = '0.1.0'.freeze
 
-  extend Forwardable
   include Comparable
-
-  def_delegators :@time, :to_i
 
   # Parse 'HH:MM:SS' format string and return its object
   #
@@ -23,13 +18,16 @@ class TimeSecond
     new(h.to_i * 60 * 60 + m.to_i * 60 + s.to_i)
   end
 
-  # new
-  #
-  # @param [Integer] second
-  #
-  # @return [TimeSecond] new object
-  def initialize(sec)
-    @time = sec.to_i
+  def initialize(time) # :nodoc:
+    @time = time
+  end
+
+  def to_i
+    @time.to_int
+  end
+
+  def to_f
+    @time.to_f
   end
 
   # Return hour
