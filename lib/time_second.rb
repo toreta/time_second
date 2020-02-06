@@ -22,10 +22,16 @@ class TimeSecond < Numeric
     @time = time
   end
 
+  # Returns integer value of seconds
+  #
+  # @return [Integer] seconds
   def to_i
     @time.to_int
   end
 
+  # Returns float value of seconds
+  #
+  # @return [Float] seconds
   def to_f
     @time.to_f
   end
