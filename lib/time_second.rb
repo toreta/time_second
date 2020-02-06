@@ -34,21 +34,21 @@ class TimeSecond < Numeric
   #
   # @return [Integer] Hour (0 ~ )
   def hour
-    @time / 60 / 60
+    @time.to_i / 60 / 60
   end
 
   # Return minute
   #
   # @return [Integer] Minute (0 ~ 59)
   def minute
-    @time / 60 % 60
+    @time.to_i / 60 % 60
   end
 
   # Return second
   #
   # @return [Integer] TimeSecond (0 ~ 59)
   def second
-    @time % 60
+    @time.to_i % 60
   end
 
   # Return 'HH:MM:SS' format string
@@ -71,6 +71,6 @@ class TimeSecond < Numeric
 
   # Compares one TimeSecond and another or a Integer to this TimeSecond.
   def <=>(other)
-    @time.to_i <=> other.to_i
+    @time <=> other
   end
 end
