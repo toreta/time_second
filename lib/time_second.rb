@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 # Make it easy to handle numeric value as seconds.
 class TimeSecond < Numeric
-  VERSION = '0.1.0'.freeze
+  VERSION = '0.1.0'
 
   include Comparable
 
