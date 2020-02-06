@@ -40,12 +40,13 @@ t = TimeSecond.parse('02:01:39')
 t.to_i #=> 7299
 
 # Support basic arithmetic operations
-TimeSecond.new(7) + 3   #=> 10
-TimeSecond.new(7) - 3   #=> 4
-TimeSecond.new(7) * 3   #=> 21
-TimeSecond.new(7) / 3   #=> 2
-TimeSecond.new(7) / 3.0 #=> 2.3333333333333335
-TimeSecond.new(7) % 3   #=> 1
+t = TimeSecond.new(7)
+t + 3   #=> 10
+t - 3   #=> 4
+t * 3   #=> 21
+t / 3   #=> 2
+t / 3.0 #=> 2.3333333333333335
+t % 3   #=> 1
 ```
 
 ## Contributing
