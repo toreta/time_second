@@ -5,38 +5,44 @@ class TimeSecondTest < Minitest::Test
     refute_nil ::TimeSecond::VERSION
   end
 
+  T1 = 2 * 60 * 60 + 1 * 60 + 39
+  T2 = 2 * 60 * 60 + 1 * 60 + 41.258
+
   def setup
-    @second_i = TimeSecond.new(2 * 60 * 60 + 1 * 60 + 39)
-    @second_f = TimeSecond.new(2 * 60 * 60 + 1 * 60 + 39.258)
+    @t1 = TimeSecond.new(T1)
+    @t2 = TimeSecond.new(T2)
   end
 
   def test_hour
-    assert_equal @second_i.hour, 2
-    assert_equal @second_f.hour, 2
+    assert_equal @t1.hour, 2
+    assert_equal @t2.hour, 2
   end
 
   def test_minute
-    assert_equal @second_i.minute, 1
-    assert_equal @second_f.minute, 1
+    assert_equal @t1.minute, 1
+    assert_equal @t2.minute, 1
   end
 
   def test_second
-    assert_equal @second_i.second, 39
-    assert_equal @second_f.second, 39
+    assert_equal @t1.second, 39
+    assert_equal @t2.second, 41
   end
 
   def test_hms
-    assert_equal @second_i.hms, '02:01:39'
-    assert_equal @second_f.hms, '02:01:39'
+    assert_equal @t1.hms, '02:01:39'
+    assert_equal @t2.hms, '02:01:41'
   end
 
   def test_hm
-    assert_equal @second_i.hm, '02:01'
-    assert_equal @second_f.hm, '02:01'
+    assert_equal @t1.hm, '02:01'
+    assert_equal @t2.hm, '02:01'
   end
 
   def test_parse
     assert_instance_of TimeSecond, TimeSecond.parse('02:01:39')
+    assert_equal @t1.hour, 2
+    assert_equal @t1.minute, 1
+    assert_equal @t1.second, 39
   end
 
   def test_parse_with_invalid_format
@@ -46,7 +52,7 @@ class TimeSecondTest < Minitest::Test
   end
 
   def test_compares
-    second2 = TimeSecond.new(2 * 60 * 60 + 1 * 60 + 41.839)
-    assert @second_i < second2
+    assert @t1 < @t2
   end
 end
+
