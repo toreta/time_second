@@ -1,13 +1,8 @@
-require 'forwardable'
-
-# Integer as a Second
-class TimeSecond
+# Make it easy to handle numeric value as seconds.
+class TimeSecond < Numeric
   VERSION = '0.1.0'.freeze
 
-  extend Forwardable
   include Comparable
-
-  def_delegators :@time, :to_i
 
   # Parse 'HH:MM:SS' format string and return its object
   #
@@ -23,34 +18,43 @@ class TimeSecond
     new(h.to_i * 60 * 60 + m.to_i * 60 + s.to_i)
   end
 
-  # new
+  def initialize(time) # :nodoc:
+    @time = time
+  end
+
+  # Returns integer value of seconds
   #
-  # @param [Integer] second
+  # @return [Integer] seconds
+  def to_i
+    @time.to_int
+  end
+
+  # Returns float value of seconds
   #
-  # @return [TimeSecond] new object
-  def initialize(sec)
-    @time = sec.to_i
+  # @return [Float] seconds
+  def to_f
+    @time.to_f
   end
 
   # Return hour
   #
   # @return [Integer] Hour (0 ~ )
   def hour
-    @time / 60 / 60
+    @time.to_i / 60 / 60
   end
 
   # Return minute
   #
   # @return [Integer] Minute (0 ~ 59)
   def minute
-    @time / 60 % 60
+    @time.to_i / 60 % 60
   end
 
   # Return second
   #
   # @return [Integer] TimeSecond (0 ~ 59)
   def second
-    @time % 60
+    @time.to_i % 60
   end
 
   # Return 'HH:MM:SS' format string
@@ -71,8 +75,8 @@ class TimeSecond
     "%02d#{sep}%02d" % [hour, minute]
   end
 
-  # Compares one TimeSecond and another or a Integer to this TimeSecond.
+  # Compares one TimeSecond and another or a Numeric to this TimeSecond.
   def <=>(other)
-    @time.to_i <=> other.to_i
+    @time <=> other
   end
 end

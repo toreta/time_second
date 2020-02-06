@@ -4,7 +4,7 @@
 
 # TimeSecond
 
-Make it easy to handle integer as seconds.
+Make it easy to handle numeric as seconds.
 
 ## Installation
 

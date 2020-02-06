@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['ziguzagu']
   spec.email         = ['ziguzagu@gmail.com']
 
-  spec.summary       = 'Make it easy to handle integer as seconds.'
-  spec.description   = 'Make it easy to handle integer as seconds.'
+  spec.summary       = 'Make it easy to handle numeric value as seconds.'
+  spec.description   = 'Make it easy to handle numeric value as seconds.'
   spec.homepage      = 'https://github.com/toreta/time_second'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
