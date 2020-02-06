@@ -1,4 +1,4 @@
-# Integer as a Second
+# Make it easy to handle numeric value as seconds.
 class TimeSecond < Numeric
   VERSION = '0.1.0'.freeze
 
@@ -69,7 +69,7 @@ class TimeSecond < Numeric
     "%02d#{sep}%02d" % [hour, minute]
   end
 
-  # Compares one TimeSecond and another or a Integer to this TimeSecond.
+  # Compares one TimeSecond and another or a Numeric to this TimeSecond.
   def <=>(other)
     @time <=> other
   end
