@@ -1,11 +1,11 @@
+# TimeSecond
+
 [![Gem Version](https://badge.fury.io/rb/time_second.svg)](https://badge.fury.io/rb/time_second)
 [![Build Status](https://travis-ci.com/toreta/time_second.svg?branch=master)](https://travis-ci.com/toreta/time_second)
 [![Maintainability](https://api.codeclimate.com/v1/badges/73a1cfd234b42457bc79/maintainability)](https://codeclimate.com/github/toreta/time_second/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/73a1cfd234b42457bc79/test_coverage)](https://codeclimate.com/github/toreta/time_second/test_coverage)
 
-# TimeSecond
-
-Make it easy to handle numeric as seconds.
+Make it easy to handle numeric value as seconds.
 
 ## Installation
 
